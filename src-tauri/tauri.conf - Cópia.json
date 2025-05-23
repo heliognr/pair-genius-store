@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Pair Genius",
+  "version": "0.1.0",
+  "identifier": "com.heliovieira.pairgenius",
+  "build": {
+    "frontendDist": "../out",
+    "devUrl": "http://localhost:9002",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Pair Genius",
+        "width": 800,
+        "height": 600,
+        "resizable": true,
+        "fullscreen": false,
+        "maximized": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "publisherDisplayName": "Heliognr",
+      "publisherIdentity": "CN=07E1A036-2191-4A30-B6AF-CEFB850144E0",
+      "longDescription": "Pair Genius is a captivating memory game designed to challenge and entertain players of all ages. Dive into a world where you flip cards to find matching pairs, aiming to clear the board and advance through increasingly difficult levels. The game offers a rich experience with dynamic features, including the ability to save your current game progress, ensuring you never lose your hard-earned achievements. Immerse yourself in the gameplay with different background music for each level, enhancing the atmosphere as you progress. Compete against yourself and others by saving your high scores, striving to become the ultimate Pair Genius champion. Choose between a structured Levels Mode, where you conquer pre-designed challenges, or a Free Play Mode, offering endless fun with customizable settings. Personalize your experience further by changing the theme of the game icons, allowing you to tailor the visual style to your preference. Get ready to test your memory, improve your focus, and enjoy hours of engaging gameplay!",
+      "shortDescription": "Pair Genius: The ultimate memory game!",
+      "identityName": "60929Heliognr.PairGenius",
+      "capabilities": [],
+      "languages": ["en-US", "pt-PT"]
+    }
+  }
+}
