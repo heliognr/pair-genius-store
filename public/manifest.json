@@ -1,11 +1,16 @@
 {
   "name": "Pair Genius",
   "short_name": "Pair Genius",
+  "id": "/", // Adicionado: ID para identificar unicamente a PWA
   "description": "A fun memory matching game by Hélio Vieira.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#EAF7FE",
   "theme_color": "#2A8CFA",
+  "orientation": "portrait-primary", // Adicionado: Orientação preferida para o app
+  "launch_handler": { // Adicionado: Define como o PWA deve ser iniciado
+    "client_mode": "auto"
+  },
   "icons": [
     {
       "src": "/icons/icon-48x48.png",
