@@ -10,13 +10,12 @@ console.log('----------------------------');
 
 
 // Configuração do next-pwa (com as opções que já definimos)
-const pwaConfig = withPWA({
+const pwaConfigOptions = { // Renomeado para evitar conflito com a função withPWA
   dest: 'public',
   register: true,
   skipWaiting: true,
   disable: process.env.NODE_ENV === 'development',
   debug: true, // Mantenha para depuração
-  // As buildExcludes são válidas e provavelmente funcionarão melhor agora
   buildExcludes: [
     /middleware.js$/,
     /_middleware.js$/,
@@ -27,11 +26,11 @@ const pwaConfig = withPWA({
     /_next\/react-loadable-manifest.json$/,
     /_next\/server\//,
   ],
-  // Algumas opções extras que pode considerar para o @ducanh2912/next-pwa:
-  // sw: 'service-worker.js', // Nome do SW gerado (padrão é sw.js, mas pode ser útil)
-  // runtimeCaching: [], // Se precisar de regras de cache personalizadas
-  // customWorkerDir: 'worker', // Se tiver um custom worker
-});
+  // As opções comentadas abaixo são exemplos, não precisa delas agora.
+  // sw: 'service-worker.js',
+  // runtimeCaching: [],
+  // customWorkerDir: 'worker',
+};
 
 const nextConfig = {
   output: 'export',
@@ -56,4 +55,5 @@ const nextConfig = {
 };
 
 // Exporte a configuração combinada
-export default pwaConfig(nextConfig);
+// A função withPWA recebe as opções do PWA e depois a configuração do Next.js
+export default withPWA(pwaConfigOptions)(nextConfig);
