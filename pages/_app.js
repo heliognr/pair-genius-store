@@ -1,5 +1,6 @@
 // pages/_app.js
-import '../styles/globals.css' // Mantenha esta linha se tiver um ficheiro de estilos globais
+// Remova a linha abaixo se não tiver ou não precisar de globals.css
+// import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
